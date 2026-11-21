@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Sahria Jaman Shazib | Portfolio</title>
+  <meta name="description" content="Portfolio of Md Sahria Jaman Shazib — BBA (Computer in Business) student at Pacific States University.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#home" class="logo">Shazib<span>.</span></a>
+
+      <!-- Mobile menu button (handled in script.js → toggleMenu) -->
+      <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.html" class="btn-small">Résumé</a></li>
+        <li>
+          <!-- Dark-mode toggle (handled in script.js → toggleTheme) -->
+          <button id="themeBtn" class="theme-btn" aria-label="Switch to dark mode">🌙</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Home / Hero ===== -->
+    <section id="home" class="hero container">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Md Sahria Jaman Shazib</h1>
+      <p class="tagline">BBA student in Computer in Business · Automobile engineering diploma · Builder of practical web tools</p>
+      <div class="hero-actions">
+        <a href="resume.html" class="btn">View My Résumé</a>
+        <a href="#projects" class="btn btn-outline">See My Projects</a>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section container">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div>
+          <p>
+            I'm a junior in the BBA (Computer in Business) program at Pacific States University in
+            Los Angeles. Before coming to the U.S., I earned a three-year diploma in automobile
+            engineering in China, which included a year working as an assistant engineer.
+          </p>
+          <p>
+            That mix of engineering and business shapes how I work: I like finding a real problem
+            in a small business or in my own life, then building a simple digital tool to solve it.
+            I have also co-authored research papers published with IEEE.
+          </p>
+        </div>
+        <div class="card interests">
+          <h3>Interests</h3>
+          <ul>
+            <li>Web development &amp; automation</li>
+            <li>Data visualization &amp; analytics</li>
+            <li>Digital marketing</li>
+            <li>Automotive &amp; car design</li>
+            <li>Entrepreneurship</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects + Interactive Filter ===== -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <p class="section-intro">Type a keyword or pick a category to filter my work.</p>
+
+      <!-- INTERACTIVE FEATURE: project search + category filter (see script.js → filterProjects) -->
+      <div class="filter-bar">
+        <input id="searchBox" type="search" placeholder="Search projects (e.g. JavaScript, Sheets)…" aria-label="Search projects">
+        <div class="filter-buttons" role="group" aria-label="Filter by category">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="web">Web</button>
+          <button class="filter-btn" data-category="data">Data</button>
+        </div>
+      </div>
+      <p id="resultCount" class="result-count" aria-live="polite"></p>
+
+      <div class="project-grid">
+
+        <article class="card project" data-category="web" data-tags="javascript html css supabase github pages budget">
+          <span class="badge">Web</span>
+          <h3>DailyBudget</h3>
+          <p>A free, multi-user budgeting web app. Visitors sign up, log daily income and expenses, and see where their money goes.</p>
+          <p><strong>My contribution:</strong> I planned the features, built the single-page front end, connected it to a Supabase database for accounts and data, and published it on GitHub Pages.</p>
+          <p class="tools"><strong>Tools:</strong> HTML, CSS, JavaScript, Supabase, GitHub Pages</p>
+          <a class="link" href="https://github.com/shahriyajaman007-collab/dailybudget" target="_blank" rel="noopener">View repository →</a>
+        </article>
+
+        <article class="card project" data-category="data" data-tags="tableau dashboard data visualization sales">
+          <span class="badge">Data</span>
+          <h3>Sales Performance Dashboard</h3>
+          <p>An interactive Tableau dashboard built from an Orders dataset, showing sales by region, the monthly sales trend, and profit by category, with a written data story.</p>
+          <p><strong>My contribution:</strong> I chose the charts, built the dashboard, and wrote the insights for STEM209: Data Visualization.</p>
+          <p class="tools"><strong>Tools:</strong> Tableau, data storytelling</p>
+        </article>
+
+        <article class="card project" data-category="data" data-tags="excel google sheets accounting trial balance p&l charts">
+          <span class="badge">Data</span>
+          <h3>Sunrise Bakery Financial Workbooks</h3>
+          <p>A set of spreadsheet labs for a sample company: trial balance, profit &amp; loss statement, and chart-based summaries.</p>
+          <p><strong>My contribution:</strong> I built the formulas, statements, and charts from raw transaction data.</p>
+          <p class="tools"><strong>Tools:</strong> Google Sheets, formulas, charts</p>
+        </article>
+
+      </div>
+      <p id="noResults" class="no-results" hidden>No projects match your search. Try another keyword.</p>
+    </section>
+
+    <!-- ===== Contact / Social ===== -->
+    <section id="contact" class="section container">
+      <h2>Let's Connect</h2>
+      <p class="section-intro">I'm open to internships, campus projects, and collaboration.</p>
+      <div class="contact-links">
+        <a class="card contact-card" href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank" rel="noopener">
+          <strong>LinkedIn</strong><span>Connect with me</span>
+        </a>
+        <a class="card contact-card" href="https://github.com/shahriyajaman007-collab" target="_blank" rel="noopener">
+          <strong>GitHub</strong><span>See my code</span>
+        </a>
+        <a class="card contact-card" href="mailto:P25621@psuca.edu">
+          <strong>Email</strong><span>P25621@psuca.edu</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Md Sahria Jaman Shazib · Built with HTML, CSS &amp; JavaScript · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

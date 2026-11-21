@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résumé | Md Sahria Jaman Shazib</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .resume { max-width: 820px; margin: 2rem auto 4rem; }
+    .resume h1 { font-size: 2rem; }
+    .resume h2 { font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.05em;
+                 color: var(--accent); border-bottom: 1px solid var(--border);
+                 padding-bottom: 0.3rem; margin: 1.8rem 0 0.8rem; }
+    .resume .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .resume .muted { color: var(--muted); }
+    .resume ul { padding-left: 1.2rem; margin: 0.4rem 0 1rem; }
+    .resume-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+    @media print { .resume-top, .site-header { display: none; } .card { box-shadow: none; border: none; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">Shazib<span>.</span></a>
+      <a href="index.html" class="btn-small">← Back to Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="resume-top resume">
+      <span class="muted">Need a copy? Use your browser's Print → Save as PDF.</span>
+      <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <article class="card resume">
+      <h1>Md Sahria Jaman Shazib</h1>
+      <p class="muted">Los Angeles, CA · P25621@psuca.edu ·
+        <a href="https://github.com/shahriyajaman007-collab" target="_blank" rel="noopener">github.com/shahriyajaman007-collab</a></p>
+
+      <h2>Education</h2>
+      <div class="row"><strong>Pacific States University, Los Angeles, CA</strong><span class="muted">Fall 2024 – Present</span></div>
+      <p>Bachelor of Business Administration (BBA), Computer in Business</p>
+      <ul>
+        <li>Relevant courses: Introduction to Programming, Data Visualization, Digital Marketing Analytics, Foundations of Management</li>
+      </ul>
+
+      <div class="row"><strong>Hainan College of Economics and Business, China</strong></div>
+      <p>Diploma in Automobile Engineering (3 years)</p>
+
+      <h2>Experience</h2>
+      <div class="row"><strong>Assistant Engineer (Internship)</strong><span class="muted">Hainan Luxurious Automobile Ltd., China</span></div>
+      <ul>
+        <li>Completed a one-year internship as the final year of the automobile engineering diploma.</li>
+        <li>Supported engineers with vehicle inspection, diagnostics, and maintenance work.</li>
+      </ul>
+
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>DailyBudget</strong> — Multi-user budgeting web app (HTML, CSS, JavaScript, Supabase), published on GitHub Pages.</li>
+        <li><strong>Sales Performance Dashboard</strong> — Tableau dashboard with regional, trend, and profit analysis.</li>
+        <li><strong>Personal Portfolio</strong> — This website, with a JavaScript project filter and dark mode.</li>
+      </ul>
+
+      <h2>Research</h2>
+      <ul>
+        <li>Co-author of research papers published with IEEE.</li>
+      </ul>
+
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Technical:</strong> HTML, CSS, JavaScript, Git &amp; GitHub, Supabase</li>
+        <li><strong>Data:</strong> Excel, Google Sheets, Tableau, Google Analytics 4</li>
+        <li><strong>Business:</strong> Digital marketing, management analysis, financial statements</li>
+        <li><strong>Languages:</strong> English, Bangla, Chinese (Mandarin)</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>
